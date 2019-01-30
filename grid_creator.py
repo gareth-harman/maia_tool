@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 #
 # Form implementation generated from reading ui file 'Grid_Creator.ui'
-#
-# Created by: PyQt5 UI code generator 5.4.1
-#
-# WARNING! All changes made in this file will be lost!
+# Created by Gareth Harman
+# September 2016
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
@@ -82,11 +80,6 @@ class Ui_MainWindow(object):
         self.y_loc = []
 
 
-    def my_error(self):  # Not currently working
-
-        self.error_dialog = QtWidgets.QErrorMessage()
-        self.error_dialog.showMessage(self.my_error_dlg)
-
     #OBTAIN CURRENT IMAGE ON GUI
     def get_curr_img(self):
 
@@ -142,11 +135,8 @@ class Ui_MainWindow(object):
 
         self.x_pix = int(self.x_pix)  # gives you '5.6'
         self.y_pix = int(self.y_pix)  # gives you '5.6'
-        #print(self.r, self.x_pix, self.y_pix)
 
         while self.current_ind < len(self.x_loc):
-            #print('working on... {}'.format(self.current_ind))
-
             self.x = int((self.x_loc[self.current_ind] / self.pix2deg) + self.fov_cent_x)
             self.y = int((self.y_loc[self.current_ind] / self.pix2deg) + self.fov_cent_y)
 
@@ -160,13 +150,7 @@ class Ui_MainWindow(object):
                 self.sq_y_2 = int((self.y + (self.r/2)))
 
                 cv2.rectangle(self.myIm, (self.sq_x_1, self.sq_y_1), (self.sq_x_2, self.sq_y_2), (170, 190, 0), -1)
-            # except:
-            #     print('Unable to print point {} Coord X: {} Coord Y: {}'.format(self.current_ind,
-            #                                                                     self.x, self.y))
-            # print('worked for {}'.format(self.current_ind))
 
-            # self.draw.ellipse((self.x_pix-self.r, self.y_pix-self.r,
-            #             self.x_pix+self.r, self.y_pix+self.r), fill=(0,255,0,250))
             self.current_ind += 1
         cv2.imwrite('disp_grid.png', self.myIm)
         self.current_img = 'disp_grid.png'
@@ -349,8 +333,6 @@ class Ui_MainWindow(object):
 
             self.x_loc.append(self.x_add)
             self.y_loc.append(self.y_add)
-
-            #self.y_add_table = self.y_add * - 1 # To get Y axis correct
 
             self.current_row_len = self.tableWidget_2.rowCount()
             print(self.current_row_len)
@@ -543,30 +525,6 @@ class Ui_MainWindow(object):
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(190, 380, 120, 80))
         self.widget.setObjectName("widget")
-        #
-        # self.tableWidget = QtWidgets.QTableWidget(self.tab)
-        # self.tableWidget.setGeometry(QtCore.QRect(40, 125, 168, 225))
-        # self.tableWidget.setObjectName("tableWidget")
-        # self.tableWidget.setColumnCount(2)
-        # self.tableWidget.setRowCount(1)
-        #
-        # self.temp_zero = QtWidgets.QTableWidgetItem(str(0))
-        #
-        # item = QtWidgets.QTableWidgetItem('1      ')
-        # self.tableWidget.setVerticalHeaderItem(0, item)
-        # item = QtWidgets.QTableWidgetItem('X Degrees')
-        # self.tableWidget.setHorizontalHeaderItem(0, item)
-        # item = QtWidgets.QTableWidgetItem('Y Degees')
-        # self.tableWidget.setHorizontalHeaderItem(1, item)
-        #
-        # self.temp_empt1 = QtWidgets.QTableWidgetItem('-')
-        # self.temp_empt2 = QtWidgets.QTableWidgetItem('-')
-        #
-        # self.tableWidget.setItem(0, 0, self.temp_empt1)
-        # self.tableWidget.setItem(0, 1, self.temp_empt2)
-        #
-        # # self.tableWidget.resizeRowToContents(1)
-        # self.tableWidget.resizeColumnsToContents()
 
         # Coordinate Table
         self.tableWidget_2 = QtWidgets.QTableWidget(self.centralwidget)
@@ -587,10 +545,6 @@ class Ui_MainWindow(object):
 
         self.tableWidget_2.setItem(0, 0, self.temp_empt1)
         self.tableWidget_2.setItem(0, 1, self.temp_empt2)
-        # self.tableWidget_2.selectRow.connect(self.test)
-
-        # self.tableWidget.resizeRowToContents(1)
-        #self.tableWidget_2.resizeColumnsToContents()
 
         # Grid Name Editor
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
@@ -629,12 +583,10 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(self.save_xml)
         self.pushButton_4.setEnabled(False)
 
-
         self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_5.setGeometry(QtCore.QRect(10, 500, 251, 23))
         self.pushButton_5.setObjectName("pushButton_5")
         self.pushButton_5.clicked.connect(self.add_stims)
-
 
         self.pushButton_6 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_6.setObjectName("pushButton_6")
@@ -720,11 +672,6 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 803, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-
-
-        # self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        # self.statusbar.setObjectName("statusbar")
-        # MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
