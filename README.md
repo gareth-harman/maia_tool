@@ -9,7 +9,7 @@
 
 This works with either 
 
-<img src="imgs/od.bmp" alt="drawing" width="600" class="center"/>
+<img src="imgs/od.bmp" alt="drawing" width="500" class="center"/>
 
 or 
 
