@@ -9,8 +9,8 @@
 
 This works with either 
 
-<img src="imgs/od.bmp" alt="drawing" width="200" class="center"/>
+<img src="imgs/od.bmp" alt="drawing" width="600" class="center"/>
 
 or 
 
-<img src="imgs/maia_od.png" alt="drawing" width="200" class="center"/>
+<img src="imgs/maia_od.png" alt="drawing" width="500" class="center"/>
