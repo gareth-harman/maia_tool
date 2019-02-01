@@ -3,12 +3,12 @@
 ### Tool to load MAIA microperimetry data 
 
 **Python Dependencies**
-`tkinter`
-`PyQt5`
-`numpy`
-`PIL`
-`pandas`
-`cv2`
+`tkinter` <br>
+`PyQt5` <br>
+`numpy` <br>
+`PIL` <br>
+`pandas` <br>
+`cv2` <br>
 `getpass`
 
 
