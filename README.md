@@ -9,7 +9,7 @@
 
 This works with either 
 
-![MP1](imgs/od.bmp =40x40)
+![MP1](imgs/od.bmp =250x)
 
 or 
 
