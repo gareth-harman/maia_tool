@@ -10,7 +10,7 @@
 `PIL` <br>
 `pandas` <br>
 `cv2` <br>
-`getpass`
+`getpass` <br>
 
 
 1) Load x and y coordinates in an excel file to generate a new grid to upload into the MAIA instrument
