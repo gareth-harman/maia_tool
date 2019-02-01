@@ -2,6 +2,16 @@
 
 ### Tool to load MAIA microperimetry data 
 
+**Python Dependencies**
+`tkinter`
+`PyQt5`
+`numpy`
+`PIL`
+`pandas`
+`cv2`
+`getpass`
+
+
 1) Load x and y coordinates in an excel file to generate a new grid to upload into the MAIA instrument
 
 **Input Requirements**
