@@ -9,8 +9,8 @@
 
 This works with either 
 
-![MP1](imgs/OD_mp1.bmp)
+![MP1](imgs/od.bmp)
 
 or 
 
-![MAIA](imgs/OD_maia.png)
+![MAIA](imgs/maia_od.png)
