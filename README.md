@@ -9,8 +9,8 @@
 
 This works with either 
 
-![MP1](imgs/od.bmp =250x)
+<img src="imgs/od.bmp" alt="drawing" width="200"/>
 
 or 
 
-![MAIA](imgs/maia_od.png =40x40)
+<img src="imgs/maia_od.png" alt="drawing" width="200"/>
