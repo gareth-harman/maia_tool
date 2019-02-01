@@ -1,6 +1,6 @@
 # maia_tool
 
-# Tool to load MAIA microperimetry data 
+### Tool to load MAIA microperimetry data 
 
 1) Load x and y coordinates in an excel file to generate a new grid to upload into the MAIA instrument
 
@@ -33,3 +33,4 @@ or
 
 4) Manually create grid from point and click
 
+- The software also allows for the user to click on the image in the gui to create points through this method
