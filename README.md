@@ -9,8 +9,10 @@
 
 This works with either 
 
+### MP1
 <img src="imgs/od.bmp" alt="drawing" width="500" class="center"/>
 
 or 
 
+### MAIA
 <img src="imgs/maia_od.png" alt="drawing" width="500" class="center"/>
